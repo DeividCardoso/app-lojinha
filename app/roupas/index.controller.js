@@ -3,16 +3,16 @@
 
     angular
         .module('app')
-        .controller('Questions.IndexController', Controller);
+        .controller('Roupas.IndexController', Controller);
 
-    function Controller(UserService, QuestionService, FlashService) {
+    function Controller(UserService, RoupasService, FlashService) {
         var vm = this;
 
         vm.user = null;
-        vm.question = null;
-        vm.questions = null;
-        vm.saveQuestion = saveQuestion;
-        vm.deleteQuestion = deleteQuestion;
+        vm.roupa = null;
+        vm.roupas = null;
+        vm.saveRoupa = saveRoupa;
+        vm.deleteRoupa = deleteRoupa;
 
         initController();
 
@@ -20,37 +20,37 @@
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
             });
-            getAllQuestions();
+            getAllRoupas();
         }
 
-        function saveQuestion() {
-           if(!vm.question || !vm.question.title) return;
+        function saveRoupa() {
+           if(!vm.roupa || !vm.roupa.codigo) return;
 
-            QuestionService.Create(vm.question)
+            RoupasService.Create(vm.roupa)
                 .then(function () {
-                    FlashService.Success('Your question has been successfully registered!');
-                    getAllQuestions();
-                    vm.question = null;
+                    FlashService.Success('Nova peça cadastrada com sucesso!');
+                    getAllRoupas();
+                    vm.roupa = null;
                 })
                 .catch(function (error) {
                     FlashService.Error(error);
                 });
         }
 
-        function deleteQuestion(elem) {
-            QuestionService.Delete(elem.q._id)
+        function deleteRoupa(elem) {
+            RoupasService.Delete(elem.q._id)
                 .then(function () {
-                    FlashService.Success('Your question has been successfully removed!');
-                    getAllQuestions();
+                    FlashService.Success('Peça apagada com sucesso!');
+                    getAllRoupas();
                 })
                 .catch(function (error) {
                     FlashService.Error(error);
                 });
         }
 
-        function getAllQuestions(){
-            QuestionService.GetAll().then(function (questions) {
-                vm.questions = questions;
+        function getAllRoupas(){
+            RoupasService.GetAll().then(function (roupas) {
+                vm.roupas = roupas;
             });
         }
     }

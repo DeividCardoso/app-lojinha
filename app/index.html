@@ -7,22 +7,34 @@
     <link href="/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app-content/app.css" rel="stylesheet" />
 </head>
-<body class="container">
+<body>
     <!-- header -->
     <header>
-        <ul class="nav nav-tabs">
-            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
-            <li ng-class="{active: activeTab === 'roupa'}"><a ui-sref="roupa">Roupas</a></li>
-            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
-            <li><a href="/login" target="_self">Logout</a></li>
-        </ul>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="home">Lojinha Roupas</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
+                    <li ng-class="{active: activeTab === 'roupas'}"><a ui-sref="roupas">Roupas</a></li>
+                    <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/login" target="_self">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
         </div>
     </header>
 
-    <!-- main -->
-    <main ui-view></main>
+    <div class="container">
+        <!-- main -->
+        <main ui-view></main>
+    </div>
 
     <!-- footer -->
     <footer></footer>

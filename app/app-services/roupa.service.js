@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .factory('QuestionService', Service);
+        .factory('RoupasService', Service);
 
     function Service($http, $q) {
         var service = {};
@@ -14,16 +14,16 @@
 
         return service;
 
-        function Create(question) {
-            return $http.post('/api/questions', question).then(handleSuccess, handleError);
+        function Create(roupa) {
+            return $http.post('/api/roupas', roupa).then(handleSuccess, handleError);
         }
 
         function Delete(_id) {
-            return $http.delete('/api/questions/' + _id).then(handleSuccess, handleError);
+            return $http.delete('/api/roupas/' + _id).then(handleSuccess, handleError);
         }
 
         function GetAll() {
-            return $http.get('/api/questions').then(handleSuccess, handleError);
+            return $http.get('/api/roupas').then(handleSuccess, handleError);
         }
 
         function handleSuccess(res) {

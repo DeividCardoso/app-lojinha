@@ -5,7 +5,7 @@
         .module('app')
         .controller('Roupas.IndexController', Controller);
 
-    function Controller(UserService, RoupasService, FlashService) {
+    function Controller(UserService, RoupaService, FlashService) {
         var vm = this;
 
         vm.user = null;
@@ -14,9 +14,9 @@
         vm.saveRoupa = saveRoupa;
         vm.deleteRoupa = deleteRoupa;
 
-        initController();
+        initUser();
 
-        function initController() {
+        function initUser() {
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
             });
@@ -26,7 +26,7 @@
         function saveRoupa() {
            if(!vm.roupa || !vm.roupa.codigo) return;
 
-            RoupasService.Create(vm.roupa)
+            RoupaService.Create(vm.roupa)
                 .then(function () {
                     FlashService.Success('Nova peça cadastrada com sucesso!');
                     getAllRoupas();
@@ -38,7 +38,7 @@
         }
 
         function deleteRoupa(elem) {
-            RoupasService.Delete(elem.q._id)
+            RoupaService.Delete(elem.q._id)
                 .then(function () {
                     FlashService.Success('Peça apagada com sucesso!');
                     getAllRoupas();
@@ -49,7 +49,7 @@
         }
 
         function getAllRoupas(){
-            RoupasService.GetAll().then(function (roupas) {
+            RoupaService.GetAll().then(function (roupas) {
                 vm.roupas = roupas;
             });
         }

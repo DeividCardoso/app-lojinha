@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MEAN Stack User Registration and Login Example Application</title>
+    <title>Lojinha Roupas</title>
 
     <link href="/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app-content/app.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
@@ -13,7 +14,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" ui-sref="home">Lojinha Roupas</a>
+                    <a class="navbar-brand" ui-sref="home" style="font-family: 'Mansalva', cursive;">Lojinha Roupas</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
@@ -48,7 +49,12 @@
     <script src="app.js"></script>
     <script src="app-services/user.service.js"></script>
     <script src="app-services/flash.service.js"></script>
+    <script src="app-services/roupa.service.js"></script>    
+    
     <script src="home/index.controller.js"></script>
+
+    <script src="roupas/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
+    
 </body>
 </html>

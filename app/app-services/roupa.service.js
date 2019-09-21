@@ -3,9 +3,10 @@
 
     angular
         .module('app')
-        .factory('RoupasService', Service);
+        .factory('RoupaService', Service);
 
     function Service($http, $q) {
+        var apiUrl = "http://localhost:9050";
         var service = {};
 
         service.Create = Create;
@@ -15,15 +16,15 @@
         return service;
 
         function Create(roupa) {
-            return $http.post('/api/roupas', roupa).then(handleSuccess, handleError);
+            return $http.post(apiUrl + '/api/roupas', roupa).then(handleSuccess, handleError);
         }
 
         function Delete(_id) {
-            return $http.delete('/api/roupas/' + _id).then(handleSuccess, handleError);
+            return $http.delete(apiUrl + '/api/roupas/' + _id).then(handleSuccess, handleError);
         }
 
         function GetAll() {
-            return $http.get('/api/roupas').then(handleSuccess, handleError);
+            return $http.get(apiUrl + '/api/roupas').then(handleSuccess, handleError);
         }
 
         function handleSuccess(res) {

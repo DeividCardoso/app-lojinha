@@ -1,7 +1,10 @@
+
+<div class="container">
 <h2>Nova peça</h2>
 <hr>
+
+
 <div class="form-container">
-    <div>
         <form method="post">
             <div class="col-sm-6">
                 <div class="form-group">
@@ -10,75 +13,73 @@
                 </div>
                 <div class="form-group">
                     <label for="data">Data de Entrada</label>
-                    <input type="date" id="data" class="form-control" ng-model="vm.question.entrada" />
+                    <input type="date" id="data" class="form-control" ng-model="vm.roupa.data-entrada" />
                 </div>
                 <div class="form-group">
                     <label for="tipo">Tipo</label>
-                    <input type="text" id="tipo" class="form-control" ng-model="vm.question.tipo" />
+                    <input type="text" id="tipo" class="form-control" ng-model="vm.roupa.tipo" />
                 </div>
                 <div class="form-group">
                     <label for="marca">Marca</label>
-                    <input type="text" id="marca" class="form-control" ng-model="vm.question.marca" />
+                    <input type="text" id="marca" class="form-control" ng-model="vm.roupa.marca" />
                 </div>
                 <div class="form-group">
                     <label for="caracteristicas">Características</label>
-                    <input type="text" id="caracteristicas" class="form-control" ng-model="vm.question.caracteristicas" />
+                    <input type="text" id="caracteristicas" class="form-control" ng-model="vm.roupa.caracteristicas" />
                 </div>
                 <div class="form-group">
                     <label for="tamanho">Tamanho</label>
-                    <input type="text" id="tamanho" class="form-control" ng-model="vm.question.tamanho" />
+                    <input type="text" id="tamanho" class="form-control" ng-model="vm.roupa.tamanho" />
                 </div>
             </div>
             <div class="col-sm-6">
                     <div class="form-group">
                         <label for="cor">Cor</label>
-                        <input type="text" id="cor" class="form-control" ng-model="vm.question.cor" />
+                        <input type="text" id="cor" class="form-control" ng-model="vm.roupa.cor" />
                     </div>
                     <div class="form-group">
                         <label for="vetiqueta">Valor da etiqueta</label>
-                        <input type="number" step="0.01" id="vetiqueta" class="form-control" ng-model="vm.question.etiqueta" />
+                        <input type="number" step="0.01" id="vetiqueta" class="form-control" ng-model="vm.roupa.etiqueta" />
                     </div>
                     <div class="form-group">
                         <label for="vpago">Valor Pago</label>
-                        <input type="number" step="0.01" id="vpago" class="form-control" ng-model="vm.question.pago" />
+                        <input type="number" step="0.01" id="vpago" class="form-control" ng-model="vm.roupa.pago" />
                     </div>
                     <div class="form-group">
                         <label for="vmargem">Valor para margem de 100%</label>
-                        <input type="number" step="0.01" id="vmargem" class="form-control" ng-model="vm.question.margem" />
+                        <input type="number" step="0.01" id="vmargem" class="form-control" ng-model="vm.roupa.margem" />
                     </div>
                     <div class="form-group">
                         <label for="preco">Preço sugerido</label>
-                        <input type="number" step="0.01" id="preco" class="form-control" ng-model="vm.question.sugerido" />
+                        <input type="number" step="0.01" id="preco" class="form-control" ng-model="vm.roupa.sugerido" />
                     </div>
                     <div class="form-group">
                         <label for="imagem">Url da imagem</label>
-                        <input type="text" id="imagem" class="form-control" ng-model="vm.question.url" />
+                        <input type="text" id="imagem" class="form-control" ng-model="vm.roupa.url" />
                     </div>
                 </div>
             <div class="form-group" style="float: right;">
-                <button class="btn btn-primary" style="float: right;" ng-click="vm.saveRoupa()">Adicionar peça</button>
+                <button class="btn btn-primary" style="float: right;" ng-click="vm.saveRoupa()">Salvar peça</button>
             </div>
         </form>
-    </div>
+</div>
+</div>
 
+<div class="container">
+    <h3>Peças cadastradas</h3>
 
-
-    <div style="display: block; margin-top: 40px;">
-        <h2>Peças cadastradas</h2>
-
-        <table class="table">
-            <thead>
-                <th>Codigo</th>
-                <th class="text-center" style="float: right;">Ações</th>
-            </thead>
-            <tbody>
-                <tr ng-repeat="q in vm.questions">
-                    <td>{{ q.codigo }}</td>
-                    <td class="text-center">
-                        <button class="btn btn-danger" style="float: right;" ng-click="vm.deleteRoupa(this)">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table">
+        <thead>
+            <th>Codigo</th>
+            <th class="text-center" style="float: right;">Ações</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="q in vm.roupas">
+                <td><a ng-click="">{{ q.codigo }}</a></td>
+                <td class="text-center">
+                    <button class="btn btn-danger" style="float: right;" ng-click="vm.deleteRoupa(this)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

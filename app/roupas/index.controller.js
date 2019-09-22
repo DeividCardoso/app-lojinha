@@ -53,5 +53,15 @@
                 vm.roupas = roupas;
             });
         }
+
+        function showRoupa(elem){
+            vm.roupa = elem.q
+            .then(function () {
+                FlashService.Success('Peça atualizada');
+            })
+            .catch(function (error) {
+                FlashService.Error(error);
+            });
+        }
     }
 })();

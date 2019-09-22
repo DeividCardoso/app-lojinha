@@ -3,97 +3,12 @@
 <hr>
 <div style="display: inline-flex; flex-wrap: wrap;">
     
-    <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-        <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
+    <div ng-repeat="q in vm.roupas" class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
+        <img class="card-img-top img-thumbnail" src="{{q.url}}" alt="Card image cap">
         <div class="card-body">
-            <h4>#Tailored</h4>
-            <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
+            <h4>{{ q.codigo }}</h4>
+            <p class="card-text">Sugerido <span style="float: right;">${{q.sugerido}}</span></p>
         </div>
-    </div>
-    <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-            <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h4>#Tailored</h4>
-                <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-            </div>
-        </div>
-        <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h4>#Tailored</h4>
-                    <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                </div>
-            </div>
-            <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                    <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4>#Tailored</h4>
-                        <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                    </div>
-                </div>
-                <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                        <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4>#Tailored</h4>
-                            <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                        </div>
-                    </div>
-                    <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                            <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h4>#Tailored</h4>
-                                <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                            </div>
-                        </div>
-                        <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4>#Tailored</h4>
-                                    <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                </div>
-                            </div>
-                            <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                    <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4>#Tailored</h4>
-                                        <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                    </div>
-                                </div>
-                                <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                        <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4>#Tailored</h4>
-                                            <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                            <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h4>#Tailored</h4>
-                                                <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                                <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <h4>#Tailored</h4>
-                                                    <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                                    <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                                    <div class="card-body">
-                                                        <h4>#Tailored</h4>
-                                                        <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="card " style="width: 18rem; margin: 10px 0 10px 10px; border: 0.1px solid #ccc; padding: 10px 20px 0 20px;">
-                                                        <img class="card-img-top img-thumbnail" src="https://d30yzb15lwfdhi.cloudfront.net/media/catalog/product/cache/2/small_image/550x770/602f0fa2c1f0d1ba5e241f914e856ff9/n/e/new-preto-verde.jpg" alt="Card image cap">
-                                                        <div class="card-body">
-                                                            <h4>#Tailored</h4>
-                                                            <p class="card-text">Sugerido <span style="float: right;">$10.91</span></p>
-                                                        </div>
-                                                    </div>
-   
+    </div>   
 </div>
 </div>

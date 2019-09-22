@@ -5,10 +5,12 @@
         .module('app')
         .controller('Home.IndexController', Controller);
 
-    function Controller(UserService) {
+    function Controller(UserService, RoupaService) {
         var vm = this;
 
         vm.user = null;
+        vm.roupa = null;
+        vm.roupas = null;
 
         initUser();
 
@@ -19,7 +21,15 @@
                         vm.user = user;
                     });
             });
+            getAllRoupas();
         }
+
+        function getAllRoupas(){
+            RoupaService.GetAll().then(function (roupas) {
+                vm.roupas = roupas;
+            });
+        }
+
     }
 
 })();

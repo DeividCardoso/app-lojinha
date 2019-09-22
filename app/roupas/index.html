@@ -75,7 +75,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="q in vm.roupas">
-                <td><a ng-click="">{{ q.codigo }}</a></td>
+                <td><a ng-click="vm.showRoupa(this)">{{ q.codigo }}</a></td>
                 <td class="text-center">
                     <button class="btn btn-danger" style="float: right;" ng-click="vm.deleteRoupa(this)">Delete</button>
                 </td>

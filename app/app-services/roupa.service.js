@@ -12,8 +12,13 @@
         service.Create = Create;
         service.GetAll = GetAll;
         service.Delete = Delete;
+        service.Update = Update;
 
         return service;
+
+        function Update(roupa){
+            return $http.update(apiUrl + '/api/roupas/' + roupa._id, roupa).then(handleSuccess, handleError);
+        }
 
         function Create(roupa) {
             return $http.post(apiUrl + '/api/roupas', roupa).then(handleSuccess, handleError);
